@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Research | Marie Guyomard</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Research" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Equivalence between Interpretable Neural Network and Kernel Logistic Regression" />
+<meta property="og:description" content="Equivalence between Interpretable Neural Network and Kernel Logistic Regression" />
+<link rel="canonical" href="http://localhost:4000/research/" />
+<meta property="og:url" content="http://localhost:4000/research/" />
+<meta property="og:site_name" content="Marie Guyomard" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-23T11:47:12+02:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Research" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-07-23T11:47:12+02:00","datePublished":"2025-07-23T11:47:12+02:00","description":"Equivalence between Interpretable Neural Network and Kernel Logistic Regression","headline":"Research","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/research/"},"url":"http://localhost:4000/research/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Marie Guyomard" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Marie Guyomard</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/cv/">CV</a><a class="page-link" href="/publications/">Publications</a><a class="page-link" href="/research/">Research</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Research</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="SATURNN">Equivalence between Interpretable Neural Network and Kernel Logistic Regression</h1>
+
+<div style="text-align: justify;">
+
+The work of my thesis aimed to develop an explainable supervised classification method, thereby meeting the requirements of precision medicine. This research falls within the fields of <span style="color: royalblue;"><strong>Explainable Artificial Intelligence</strong></span> (XAI) and neural network learning.<br />
+I developed an interpretable neural network called <span style="color: royalblue;"><strong>SATURNN</strong></span> (<em>Splines Approximation Through Understandable ReLU Neural Network</em>), whose scoring function is modeled as an additive sum of univariate spline functions <a href="https://ieeexplore.ieee.org/abstract/document/10095422" style="color: #EC4899">[Article]</a>.<br /><br />
+
+</div>
+
+<div style="display: flex; align-items: center; gap: 2rem;">
+ <img src="/assets/images/Schema_SATURNN.png" alt="SATURNN" style="max-width:700px;" />
+</div>
+
+<div style="text-align: justify;">
+  <br /><br />
+  This model extends interpretable paradigms such as <span style="color: royalblue;">Generalized Additive Models</span> (GAMs) and <span style="color: royalblue;">Neural Additive Models</span> (NAMs). However, although interpretable, <span style="color: royalblue;">SATURNN</span>, like any neural network, does not guarantee convergence to a unique solution.<br />
+  
+  To address this limitation, we linearized the SATURNN scoring function in infinite dimension (comprising a large number of neurons) in the neighborhood of its initializations, thus showing that this network can be approximated by logistic regression applied to data transformed by this linearized function. However, the performance of this approach is influenced by the randomness of SATURNN’s initializations.<br />
+  
+  Finally, we demonstrated that this linearized scoring function can be reformulated as a kernel, asymptotically converging to a finite limit. This led to the creation of the <strong><span style="color: royalblue;">EKLR</span></strong> (<em>Expected Kernel Logistic Regression</em>) method, in which the variable segmentation by the kernel is deterministic and does not require any additional learning parameters. The resulting decision rule is an additive sum of univariate splines, interpretable and accompanied by convergence guarantees <a href="https://proceedings.mlr.press/v202/guyomard23a.html" style="color: #EC4899">[Article]</a>.
+  <br /><br />
+</div>
+
+<p>Keywords: Neural Networks, Logistic Kernel Regression, Tangent Neural Kernel, Generalized Additive Models, Univariate Splines, Interpretable Machine Learning, Explicable Artificial Intelligence, Precision Medicine.</p>
+
+<p><br /><br /></p>
+<h1 id="RL">Representation Learning on SNDS reimbursement data</h1>
+
+<div style="text-align: justify;">
+As part of my postdoctoral work, my research aims to develop a decision-support algorithm for oncologists based on the analysis of data from health insurance centralized in the <span style="color: royalblue;"><em>Système National des Données de Santé</em> </span> (SNDS). This vast repository of <span style="color: royalblue;">Electronic Health Records</span>  (EHRs) allows the tracking of patients’ therapeutic pathways, represented as temporal sequences of visits. These unstructured, high-dimensional data present major methodological challenges. I first focused on evaluating <span style="color: royalblue;"><strong>Representation Learning</strong></span> methods for patients, which consist of projecting EHR information into a reduced-dimensional latent space. Our work revealed that the most effective unsupervised deep Representation Learning approaches in terms of common empirical metrics fail to accurately represent the clinical reality <a href="https://ieeexplore.ieee.org/abstract/document/10600940" style="color: #EC4899">[Article]</a>.<br />
+
+Furthermore, given the access constraints to SNDS data (special training and authorizations), I collaborated with Thomas Guyet (INRIA Lyon) to simulate a <span style="color: royalblue;"><strong>realistic breast cancer database</strong></span> . This methodological work, based on carefully calibrated probabilistic laws, faithfully reproduces patients’ therapeutic pathways while respecting confidentiality requirements. This work (in submission) makes the simulated database freely available, reflecting the architecture and specificities of SNDS data and thus enabling practice on this data as well as algorithm development and evaluation.<br />
+
+Finally, due to its highly complex architecture, high dimensionality, and the abstract, very specific coding of medical events, the SNDS is difficult to exploit. To address this challenge, we developed a <span style="color: royalblue;"><strong>Python package</strong></span> , <span style="color: royalblue;"><em>pySNDS</em>,</span>  which simplifies the identification and interpretation of relevant information in this complex database, thus facilitating its use for research purposes. This package is currently under submission.<br /><br />
+
+</div>
+
+<p>Keywords : Electronic Health Records, Deep Representation Learning, Système National des Données de Santé.</p>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer">
+  <div class="wrapper" style="text-align: center;">
+    <p style="margin: 0;">Powered by Jekyll.</p>
+  </div>
+</footer></body>
+
+</html>
